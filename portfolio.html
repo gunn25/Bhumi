@@ -23,6 +23,8 @@
         margin: 0;
         background-color: #081f3b;
         text-align: center;
+        margin: top; /*memposisikan tabel di tengah*/
+        /*position: fixed; /* Ini akan membuat footer selalu menempel di bawah */
       }
       .social-icons img {
         width: 25px;
@@ -40,7 +42,7 @@
         background-size: cover;
       }
       .parallax1 {
-        background-image: url("logo/parallax1.jpg");
+        background-image: url("logo/Parallax1-portofolio.png");
       }
       .parallax2 {
         background-image: url("logo/Parallax2.jpg");
@@ -63,7 +65,7 @@
         margin: 0; /* Hapus margin */
         /*width: 97vw;  Lebar penuh layar */
         text-align: center;
-        height: 200px;
+        height: 700px;
       }
 
       .jumbotron h1 {
@@ -73,17 +75,75 @@
 
       .footer-section {
         background-color: #081f3b;
+        margin: auto; /*memposisikan tabel di tengah*/
         width: 100%;
         color: white;
         padding: 2px; /* Atur padding sesuai kebutuhan */
-        border-radius: 0px; /* Jika ingin sudut tajam */
-        /*text-align: center;*/
-        /*position: fixed; /* Ini akan membuat footer selalu menempel di bawah */
+        border-radius: 10px; /* Jika ingin sudut tajam */
+        text-align: center;
+        
         bottom: 0;
-        width: 100%;
+        width: 80%;
         margin-bottom: 0;
+        margin: 0 auto;
         box-sizing: border-box;
+
       }
+
+      table {
+      font-size: 10px;
+      text-align: left;
+      width: 70%;
+      border-collapse: collapse;
+      margin: auto; /*memposisikan tabel di tengah*/
+      }
+      th {
+    font-size: 12px; /* Ukuran font header */
+    text-align: center; /* Rata tengah header */
+    font-weight: bold;
+    background-color: #f2f2f2; /* Warna latar header (opsional) */
+    }
+    td {
+    border: 1px solid black;
+    padding: 4px;
+    }
+
+    .image-container {
+            display: none;
+            position: absolute;
+            width: 620px;
+            background-color: #fff;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+            padding: 10px;
+            border-radius: 5px;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-gap: 5px;
+            align-items: center;
+            justify-items: center;
+            position: absolute;
+        }
+        .image-container::before {
+            content: attr(data-title);
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 20px;
+            font-weight: bold;
+            color: rgba(255, 255, 255, 0.6);
+            background-color: rgba(0, 0, 0, 0.3);
+            padding: 10px;
+            border-radius: 10px;
+            text-align: center;
+            width: 90%;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+        }
+        .image-container img {
+            width: 300px;
+            height: 200px;
+            border: 2px solid #333;
+        }
     </style>
   </head>
   <body>
@@ -107,7 +167,7 @@
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav mr-auto">
             <li class="nav-item">
-              <a class="nav-link">Home</a>
+              <a class="nav-link" href="index.html">Home</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="services.html">Services</a>
@@ -133,20 +193,245 @@
         ); // Adjust the duration as needed
       });
     </script>
-    <div class="jumbotron">
-      <h1>Welcome to Portfolio of Bhumi Cahaya Mulia</h1>
-      <p>
+<div class="jumbotron">
+  <h1>Welcome to Portfolio of Bhumi Cahaya Mulia</h1>
+  <p>
     Here, you’ll find a showcase of inspired designs and meticulously crafted 
     projects that redefine interiors and exteriors for hotels and villas.      
-      </p>
-      <br />
-    </div>
+
+  
+  <table border="1" cellpadding="8" cellspacing="0">
+    <thead>
+      <tr>
+        <th>YEARS</th>
+        <th>WORK</th>
+        <th>PROJECT</th>
+        <th>OWNER</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>2023</td>
+        <td>INTERIOR FIT OUT & LOOSE FURNITURE</td>
+        <td class="project" 
+                data-images='["Images/salsa verde/1.webp",
+                              "Images/salsa verde/2.webp",
+                              "Images/salsa verde/3.webp",
+                              "Images/salsa verde/4.webp",
+                              "Images/salsa verde/5.webp",
+                              "Images/salsa verde/6.jpg",
+                              "Images/salsa verde/7.webp",
+                              "Images/salsa verde/8.webp",
+                              "Images/salsa verde/9.jpg",
+                              "Images/salsa verde/10.webp",
+                              "Images/salsa verde/11.jpg",
+                              "Images/salsa verde/12.jpg",
+                              "Images/salsa verde/13.jpg",
+                              "Images/salsa verde/14.jpg",
+                              "Images/salsa verde/15.webp"]'>
+                RENOVATION SALSA VERDE RESTAURANT, GRAND HYATT HOTEL, NUSA DUA BALI
+            </td>
+        <td>GRAND HYATT BALI</td>
+      </tr>
+      <tr>
+        <td>2023</td>
+        <td>DESIGN AND BUILT INTERIOR FIT OUT AND LOOSE FURNITURE</td>
+        <td>RENOVATION 12 ROOMS TO THEMATIC ROOMS</td>
+        <td>GRAND HYATT BALI</td>
+      </tr>
+      <tr>
+        <td>2022</td>
+        <td>BUILT IN & LOOSE FURNITURE</td>
+        <td>RENOVATION 3 ROOMS GRAND HYATT NUSA DUA, BALI</td>
+        <td>GRAND HYATT BALI</td>
+      </tr>
+      <tr>
+        <td>2021</td>
+        <td>DESIGN DEVELOPMENT</td>
+        <td>SASANTI HILL RESTO, NAGGULAN, YOGYAKARTA</td>
+        <td>BHUMI ARTE SASANTI</td>
+      </tr>
+      <tr>
+        <td>2021</td>
+        <td>BUILDING & INTERIOR & FURNITURE</td>
+        <td>BANGKUANG VILLA, CANGGU, BALI</td>
+        <td>PERSON</td>
+      </tr>
+      <tr>
+        <td>2021</td>
+        <td>INTERIOR & FURNITURE</td>
+        <td>SASANTI BITE CORNER, YOGKARTA INTERNATIONAL AIRPORT</td>
+        <td>BHUMI ARTE SASANTI</td>
+      </tr>
+      <tr>
+        <td>2020</td>
+        <td>BUILDING & INTERIOR & FURNITURE</td>
+        <td>HOLYCOW, PALAGAN YOGYAKARTA</td>
+        <td>BHUMI ARTE SASANTI</td>
+      </tr>
+      <tr>
+        <td>2019</td>
+        <td>INTERIOR FIT OUT & FURNITURE GUESTROOM</td>
+        <td class="project" 
+                data-images='["Images/Andaz/1.webp",
+                              "Images/Andaz/2.webp",
+                              "Images/Andaz/3.webp",
+                              "Images/Andaz/4.webp",
+                              "Images/Andaz/5.webp",
+                              "Images/Andaz/6.webp",
+                              "Images/Andaz/7.webp",
+                              "Images/Andaz/8.webp",
+                              "Images/Andaz/9.webp",
+                              "Images/Andaz/10.webp"]'>
+                              ANDAZ HOTEL SANUR, BALI
+            </td>
+        <td>PT WYNNCOR BALI</td>
+      </tr>
+      <tr>
+        <td>2019</td>
+        <td>FURNITURE MOCK UP GUESTROOM</td>
+        <td>WESTIN HOTEL NUSA DUA, BALI</td>
+        <td>PT NUSA DUA GRAHA INTERNATIONAL</td>
+      </tr>
+      <tr>
+        <td>2019</td>
+        <td>INTERIOR & FURNITURE BRIDE & GROOM ROOM</td>
+        <td>HILTON HOTEL NUSA DUA, BALI</td>
+        <td>PT CATERISON SUKSES</td>
+      </tr>
+      <tr>
+        <td>2019</td>
+        <td>INTERIOR & FURNITURE KAZA RESTO</td>
+        <td class="project" 
+                data-images='["Images/kaza/1.jpg",
+                              "Images/kaza/2.jpg",
+                              "Images/kaza/3.jpg",
+                              "Images/kaza/4.jpeg",
+                              "Images/kaza/5.jpeg"]'>
+                              KANVAZ HOTEL SEMINYAK, BALI
+            </td>
+        <td>PT DAYA CIPTA GEMILANG</td>
+      </tr>
+      <tr>
+        <td>2018</td>
+        <td>FURNITURE GRAIN DINING RESTO</td>
+        <td>HILTON HOTEL NUSA DUA, BALI</td>
+        <td>PT CATERISON SUKSES</td>
+      </tr>
+      <tr>
+        <td>2017</td>
+        <td>FURNITURE SUITE ROOM RENOVATION</td>
+        <td>SOORI BALI</td>
+        <td>SOORI</td>
+      </tr>
+      <tr>
+        <td>2017</td>
+        <td>INTERIOR & FURNITURE VILLA RESORT</td>
+        <td>NEW WORLD GRAND BALI RESORT PECATU, BALI</td>
+        <td>PT MUGIE BALI INDAH</td>
+      </tr>
+      <tr>
+        <td>2017</td>
+        <td>INTERIOR & FURNITURE MOCK UP VILLA</td>
+        <td>JUMEIRAH JIMBARAN, BALI</td>
+        <td>PT ASIA PASIFIK PROPERTY</td>
+      </tr>
+      <tr>
+        <td>2016</td>
+        <td>WOOD WORK & FURNITURE GOLF CLUB HOUSE</td>
+        <td>GCH PANDAWA BALI</td>
+        <td>PT BALIRAGAWISATA</td>
+      </tr>
+      <tr>
+        <td>2016</td>
+        <td>INTERIOR & FURNITURE VILLA</td>
+        <td>MANDARIN ORIENTAL PANDAWA, BALI</td>
+        <td>PT BALIRAGAWISATA</td>
+      </tr>
+      <tr>
+        <td>2016</td>
+        <td>INTERIOR & FURNITURE VILLA</td>
+        <td>WALDORF ASTORIA PANDAWA, BALI</td>
+        <td>PT BALIRAGAWISATA</td>
+      </tr>
+      <tr>
+        <td>2015</td>
+        <td>FURNITURE SEA SLAT RESTAURANT</td>
+        <td>ALILA SEMINYAK, BALI</td>
+        <td>PT ALILA RESORT SEMINYAK</td>
+      </tr>
+      <tr>
+        <td>2014</td>
+        <td>FURNITURE GUESTROOM</td>
+        <td>ALILA SEMINYAK, BALI</td>
+        <td>PT ANAAMAYA MITA SELARAS</td>
+      </tr>
+    </tbody>
+  </table>
+  <div id="imageContainer" class="image-container">
+    <img id="image1" src="" alt="Preview 1">
+    <img id="image2" src="" alt="Preview 2">
+    <img id="image3" src="" alt="Preview 3">
+    <img id="image4" src="" alt="Preview 4">
+</div>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const imageContainer = document.getElementById("imageContainer");
+        const image1 = document.getElementById("image1");
+        const image2 = document.getElementById("image2");
+        const image3 = document.getElementById("image3");
+        const image4 = document.getElementById("image4");
+        let interval;
+
+        document.querySelectorAll(".project").forEach(item => {
+            item.addEventListener("mouseover", function (event) {
+                const images = JSON.parse(this.getAttribute("data-images"));
+                const projectTitle = this.textContent.trim();
+                let index = 0;
+
+                if (images.length >= 4) {
+                    image1.src = images[index];
+                    image2.src = images[index + 1];
+                    image3.src = images[index + 2];
+                    image4.src = images[index + 3];
+                    imageContainer.setAttribute("data-title", projectTitle);
+                    imageContainer.style.display = "grid";
+                    imageContainer.style.top = (event.pageY + 15) + "px";
+                    imageContainer.style.left = (event.pageX + 15) + "px";
+
+                    interval = setInterval(() => {
+                        index = (index + 4) % images.length;
+                        image1.src = images[index];
+                        image2.src = images[(index + 1) % images.length];
+                        image3.src = images[(index + 2) % images.length];
+                        image4.src = images[(index + 3) % images.length];
+                    }, 2000);
+                }
+            });
+
+            item.addEventListener("mousemove", function (event) {
+                imageContainer.style.top = (event.pageY + 15) + "px";
+                imageContainer.style.left = (event.pageX + 15) + "px";
+            });
+
+            item.addEventListener("mouseout", function () {
+                imageContainer.style.display = "none";
+                clearInterval(interval);
+            });
+        });
+    });
+</script>
+</p>
+<br />
+</div>
+
 
     <!-- Parallax sections -->
     <div class="parallax parallax1"></div>
     <div
       style="
-        height: 500px;
+        height: 200px;
         background-color: #f1f1f1;
         text-align: center;
         padding: 5px;
@@ -166,7 +451,7 @@
 
     <!-- Contact section at the bottom of the page -->
     <div id="contact-section">
-      <footer style="color: rgb(253, 253, 253); padding: 0px">
+      <footer style="color: rgb(253, 253, 253); padding: 0px; text-align: center">
         <div class="row">
             <!-- Logo and Description -->
             <div class="col-md-4 footer-section";>
@@ -262,9 +547,9 @@
                 </a>
               </div>
             </div>
-          </div><p style="font-size: 10px">© 2024 Bhumi Cahaya Mulia | All rights reserved.</p>
+          </div><p style="font-size: 10px">© 2024 Bhumi Cahaya Mulia | All rights reserved.</p></footer>
         </div>
-        
-      </footer>
+      </body>       
+      
 
 </html>
